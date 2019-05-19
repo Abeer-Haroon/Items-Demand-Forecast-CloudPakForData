@@ -1,0 +1,14 @@
+{
+    "id": 1558252796039,
+    "name": "Store2_Item5",
+    "latestModelVersion": 1,
+    "author": "1002",
+    "createdAt": 1558252796039,
+    "filename": "import",
+    "type": "pmml-model-3.0",
+    "serialization": "pmml",
+    "params": {},
+    "publishedBy": "",
+    "isPublished": false,
+    "publishedModelVersion": -1
+}
