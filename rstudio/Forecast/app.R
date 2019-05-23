@@ -27,22 +27,34 @@ ui <- dashboardPage(
     
     sidebarLayout(
       sidebarPanel(
+        selectInput("country", "Country:",
+                    list("USA", "UK", "Germany", "Australia", "UAE", "Spain"),selected = "UAE"
+                    
+        ),
         
-        radioButtons("radio", label = h3("Select the product"),
+        
+        selectInput("store", "Store number:",
+                    list("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"),selected = "1"
+                    
+        ),
+        
+        radioButtons("radio", label = h3("Select the clothing item"),
                      choices =  c("T-shirts" = 1,
                                   "Formal Shirts" = 2,
                                   "Jeans" = 3,
                                   "Formal Trousers" = 4,
                                   "Blazers" = 5,
                                   "Jackets" = 6,
-                                  "Shoes" =7),selected = 1),
+                                  "Shoes" =7,
+                                  "Heels" = 8
+                          ),selected = 1),
         
-        
-        
-        selectInput("store", "Store number:",
-                    list("1", "2"),selected = "1"
+        selectInput("size", "Size:",
+                    list("XS", "S", "M", "L", "XL", "XXL", "XXL"),selected = "M"
                     
         ),
+        
+        
         
         
         
@@ -201,7 +213,7 @@ server <- function(input, output) {
     
     
     
-  },height = 500, width = 600)
+  },height = 650, width = 600)
   
 }
 

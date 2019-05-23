@@ -1,0 +1,236 @@
+{
+  "name": "New dashboard",
+  "layout": {
+    "id": "page0",
+    "items": [
+      {
+        "id": "page1",
+        "items": [
+          {
+            "id": "model0000016ae127c6f5_00000000",
+            "style": {
+              "left": "399px",
+              "top": "68px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016ae128ed2d_00000000",
+            "style": {
+              "width": "200px",
+              "height": "50px",
+              "top": "17px",
+              "left": "561px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016ae128f3ae_00000000",
+            "style": {
+              "width": "217px",
+              "height": "59px",
+              "left": "114px",
+              "top": "38.5px",
+              "transform": "",
+              "-webkit-transform": ""
+            },
+            "type": "widget"
+          }
+        ],
+        "type": "absolute",
+        "title": {
+          "translationTable": {
+            "Default": "Tab 1"
+          }
+        },
+        "templateName": "NoTemplate"
+      }
+    ],
+    "style": {
+      "height": "100%"
+    },
+    "type": "tab"
+  },
+  "theme": "defaultTheme",
+  "version": 1009,
+  "eventGroups": [
+    {
+      "id": "page1:1",
+      "widgetIds": [
+        "model0000016ae127c6f5_00000000"
+      ]
+    }
+  ],
+  "properties": {
+    "defaultLocale": "Default"
+  },
+  "dataSources": {
+    "version": "1.0",
+    "sources": [
+      {
+        "id": "model0000016ae128534f_00000002",
+        "assetId": "assetId0000016ae128534f_00000000",
+        "clientId": "eyJwcm9qZWN0IjoiSXRlbURlbWFuZEZvcmVjYXN0IiwibmFtZSI6ImRlbWFuZF9zaGFwZWQiLCJ0eXBlIjoiQ1NWIn0=",
+        "module": {
+          "identifier": "demand_shaped",
+          "label": "demand_shaped",
+          "source": {
+            "id": "demand_shaped",
+            "srcUrl": {
+              "property": [
+                {
+                  "name": "separator",
+                  "value": ","
+                },
+                {
+                  "name": "ColumnNamesLine",
+                  "value": "true"
+                },
+                {
+                  "name": "headers",
+                  "value": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbnRlc3RhbnQyIiwic3ViIjoiY29udGVzdGFudDIiLCJpc3MiOiJLTk9YU1NPIiwiYXVkIjoiRFNYIiwicm9sZSI6IkFkbWluIiwicGVybWlzc2lvbnMiOlsiYWRtaW5pc3RyYXRvciIsImRlcGxveW1lbnRfYWRtaW4iLCJhY2Nlc3NfY2F0YWxvZyIsInZpcnR1YWxpemVfdHJhbnNmb3JtIiwiY2FuX3Byb3Zpc2lvbiIsIm1hbmFnZV9jYXRhbG9nIiwibWFuYWdlX3BvbGljaWVzIiwiYWNjZXNzX3BvbGljaWVzIl0sInVpZCI6IjEwMDIiLCJkaXNwbGF5X25hbWUiOiJ0ZWFtMiIsImlhdCI6MTU1ODU0MDgyMywiZXhwIjoxNTU4NTg0MDIzfQ.N2IKACqYzr7EtjPtACcEdUavWRBJ2mIEYuHtfOziLFw0sLOJS9-MI4vtu2eUiwf0N2Wy-Ieg6a-0lQa3bVcTf1QEadSAq7J9UTf5cp-lWrv-Zq_kUvYR3JawvSv10E7Q1Mj7ePZF2YYxzYg1LW0rCVo0DIp5Gc5Nj2MV0vKtCQCgBjXR29Kedm5egtFpXhC7cO-ZNfWwH7tyy7YMaA1xpaSi4dqvHTqC_dQk6VxKKivBMwrp78hcWztx-AqzaLLHDSjJo7UVpEdQDRmh8ZryHKsLz61JqFQl9nbaEum3-o500-Lj-qR3mS3XENBGKE-y7yf3iPbWMr8IYYM7mX20QA"
+                    }
+                  ]
+                }
+              ],
+              "sourceUrl": "http://dsx-core-svc:3000/v3/project/ItemDemandForecast/asset/demand_shaped.csv/download"
+            }
+          },
+          "table": {
+            "column": [
+              {
+                "datatype": "NVARCHAR(MAX)",
+                "description": "date",
+                "label": "date",
+                "name": "date",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "attribute"
+              },
+              {
+                "datatype": "BIGINT",
+                "description": "store",
+                "label": "store",
+                "name": "store",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "NVARCHAR(MAX)",
+                "description": "item",
+                "label": "item",
+                "name": "item",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "attribute"
+              },
+              {
+                "datatype": "BIGINT",
+                "description": "sales",
+                "label": "sales",
+                "name": "sales",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              }
+            ],
+            "name": "demandshaped"
+          },
+          "xsd": "https://ibm.com/daas/module/1.0/module.xsd"
+        },
+        "name": "demand_shaped",
+        "shaping": {
+          "embeddedModuleUpToDate": true
+        }
+      }
+    ]
+  },
+  "pageContext": [],
+  "drillThrough": [],
+  "widgets": {
+    "model0000016ae127c6f5_00000000": {
+      "id": "model0000016ae127c6f5_00000000",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016ae128534f_00000002",
+            "dataItems": [
+              {
+                "id": "model0000016ae1289afd_00000001",
+                "itemId": "demandshaped.item",
+                "itemLabel": "item"
+              },
+              {
+                "id": "model0000016ae128a838_00000000",
+                "itemId": "demandshaped.sales",
+                "itemLabel": "sales"
+              }
+            ],
+            "id": "model0000016ae1289afd_00000000"
+          }
+        ]
+      },
+      "visTypeLocked": true,
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016ae1289afd_00000001"
+            ],
+            "dataItemSettings": [],
+            "caption": "Bars",
+            "id": "categories"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016ae128a838_00000000"
+            ],
+            "caption": "Length",
+            "id": "values"
+          }
+        ]
+      },
+      "type": "live",
+      "visId": "com.ibm.vis.rave2bundlecolumn",
+      "name": {
+        "translationTable": {}
+      }
+    },
+    "model0000016ae128ed2d_00000000": {
+      "id": "model0000016ae128ed2d_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 24px;\">Sales per year</p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    },
+    "model0000016ae128f3ae_00000000": {
+      "id": "model0000016ae128f3ae_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 23px;\"><span>Demand per month</span></p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    }
+  }
+}
