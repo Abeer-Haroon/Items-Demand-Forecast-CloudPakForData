@@ -1,0 +1,410 @@
+{
+  "name": "New dashboard",
+  "layout": {
+    "id": "page0",
+    "items": [
+      {
+        "id": "page1",
+        "items": [
+          {
+            "id": "model0000016b7fb649bd_00000002",
+            "style": {
+              "left": "26.5px",
+              "top": "634px",
+              "height": "420px",
+              "width": "1379px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016b7fb85da0_00000000",
+            "style": {
+              "top": "101px",
+              "left": "98px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016b7fb941ef_00000000",
+            "style": {
+              "left": "777px",
+              "top": "101px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016b7fbbfe7f_00000000",
+            "style": {
+              "width": "200px",
+              "height": "50px",
+              "top": "37px",
+              "left": "274px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016b7fbbfe82_00000000",
+            "style": {
+              "width": "299px",
+              "height": "70px",
+              "top": "564px",
+              "left": "610px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016b7fbbfe84_00000000",
+            "style": {
+              "width": "222px",
+              "height": "64px",
+              "top": "37px",
+              "left": "890px",
+              "transform": "",
+              "-webkit-transform": ""
+            },
+            "type": "widget"
+          }
+        ],
+        "type": "absolute",
+        "title": {
+          "translationTable": {
+            "Default": "Tab 1"
+          }
+        },
+        "templateName": "NoTemplate"
+      }
+    ],
+    "style": {
+      "height": "100%"
+    },
+    "type": "tab"
+  },
+  "theme": "defaultTheme",
+  "version": 1009,
+  "eventGroups": [
+    {
+      "id": "page1:1",
+      "widgetIds": [
+        "model0000016b7fb649bd_00000002",
+        "model0000016b7fb85da0_00000000",
+        "model0000016b7fb941ef_00000000"
+      ]
+    }
+  ],
+  "properties": {
+    "defaultLocale": "Default"
+  },
+  "dataSources": {
+    "version": "1.0",
+    "sources": [
+      {
+        "id": "model0000016b7fb61d8a_00000002",
+        "assetId": "assetId0000016b7fb61d8a_00000000",
+        "clientId": "eyJwcm9qZWN0IjoiSXRlbXNEZW1hbmRGb3JlY2FzdCIsIm5hbWUiOiJkZW1hbmRfc2hhcGVkIiwidHlwZSI6IkNTViJ9",
+        "module": {
+          "identifier": "demand_shaped",
+          "label": "demand_shaped",
+          "source": {
+            "id": "demand_shaped",
+            "srcUrl": {
+              "property": [
+                {
+                  "name": "separator",
+                  "value": ","
+                },
+                {
+                  "name": "ColumnNamesLine",
+                  "value": "true"
+                },
+                {
+                  "name": "headers",
+                  "value": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoiYWRtaW4iLCJpc3MiOiJLTk9YU1NPIiwiYXVkIjoiRFNYIiwicm9sZSI6IkFkbWluIiwicGVybWlzc2lvbnMiOlsiYWRtaW5pc3RyYXRvciIsIm1hbmFnZV9jYXRhbG9nIiwiYWNjZXNzX2NhdGFsb2ciLCJtYW5hZ2VfcG9saWNpZXMiLCJhY2Nlc3NfcG9saWNpZXMiLCJ2aXJ0dWFsaXplX3RyYW5zZm9ybSIsImNhbl9wcm92aXNpb24iLCJkZXBsb3ltZW50X2FkbWluIl0sInVpZCI6Ijk5OSIsImRpc3BsYXlfbmFtZSI6ImFkbWluIiwiaWF0IjoxNTYxMTg2MjkzLCJleHAiOjE1NjEyMjk0OTN9.WG6anTewEyymuPvTtE8ZNBO4png7oGUJzJh8z7VwZnQc400RbBnbUzk0UhgqI-cQoA2q_DQzZOam80IgOik9FOFMOJ_lytpXqMvWjQ9FMflXfCWkiRscls-xLynYOYNcl_YRDJh40MBcNnrCJ4dmeosTPeAd7vzGLcOV9X7rbcZl3R_BfE_XsE4Z0BmtAiDfLL5Ay41T7wFq8ujXABzH6Ccxv2PJj8YEt1Udx-Hqpbzr7o2iJox9JdSK38Hr8gmjsu3GwUXDkxBn-ALcidTdsjZaTesrY3Bg-SZm9bWGpuAeGyQUp1mtar8xQs-J0k_-3hYFHsT2Kv1yF5cL5nKJ8Q"
+                    }
+                  ]
+                }
+              ],
+              "sourceUrl": "http://dsx-core-svc:3000/v3/project/ItemsDemandForecast/asset/demand_shaped.csv/download"
+            }
+          },
+          "table": {
+            "column": [
+              {
+                "datatype": "NVARCHAR(MAX)",
+                "description": "date",
+                "label": "date",
+                "name": "date",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "attribute"
+              },
+              {
+                "datatype": "BIGINT",
+                "description": "store",
+                "label": "store",
+                "name": "store",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "NVARCHAR(MAX)",
+                "description": "item",
+                "label": "item",
+                "name": "item",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "attribute"
+              },
+              {
+                "datatype": "BIGINT",
+                "description": "sales",
+                "label": "sales",
+                "name": "sales",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              }
+            ],
+            "name": "demandshaped"
+          },
+          "xsd": "https://ibm.com/daas/module/1.0/module.xsd"
+        },
+        "name": "demand_shaped",
+        "shaping": {
+          "embeddedModuleUpToDate": true
+        }
+      }
+    ]
+  },
+  "pageContext": [],
+  "drillThrough": [],
+  "widgets": {
+    "model0000016b7fb649bd_00000002": {
+      "id": "model0000016b7fb649bd_00000002",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016b7fb61d8a_00000002",
+            "dataItems": [
+              {
+                "id": "model0000016b7fb649bc_00000000",
+                "itemId": "demandshaped.date_",
+                "itemLabel": "date"
+              },
+              {
+                "id": "model0000016b7fb65bca_00000001",
+                "itemId": "demandshaped.sales",
+                "itemLabel": "sales"
+              }
+            ],
+            "id": "model0000016b7fb649bd_00000000"
+          }
+        ]
+      },
+      "visTypeLocked": true,
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016b7fb649bc_00000000"
+            ],
+            "dataItemSettings": [],
+            "caption": "x-axis",
+            "id": "categories",
+            "layerId": "data"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016b7fb65bca_00000001"
+            ],
+            "caption": "y-axis",
+            "id": "values",
+            "layerId": "data"
+          }
+        ]
+      },
+      "type": "live",
+      "name": {
+        "translationTable": {}
+      },
+      "visId": "com.ibm.vis.rave2line",
+      "properties": [
+        {
+          "id": "markers.visible",
+          "value": false
+        },
+        {
+          "id": "defaultPaletteIndex",
+          "value": 6
+        }
+      ]
+    },
+    "model0000016b7fb85da0_00000000": {
+      "id": "model0000016b7fb85da0_00000000",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016b7fb61d8a_00000002",
+            "dataItems": [
+              {
+                "id": "model0000016b7fb89741_00000002",
+                "itemId": "demandshaped.item",
+                "itemLabel": "item"
+              },
+              {
+                "id": "model0000016b7fb8a0a2_00000000",
+                "itemId": "demandshaped.sales",
+                "itemLabel": "sales"
+              }
+            ],
+            "id": "model0000016b7fb89741_00000001"
+          }
+        ]
+      },
+      "visTypeLocked": true,
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016b7fb89741_00000002"
+            ],
+            "dataItemSettings": [],
+            "caption": "Bars",
+            "id": "categories"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016b7fb8a0a2_00000000"
+            ],
+            "caption": "Length",
+            "id": "values"
+          }
+        ]
+      },
+      "type": "live",
+      "visId": "com.ibm.vis.rave2bundlecolumn",
+      "name": {
+        "translationTable": {}
+      },
+      "properties": [
+        {
+          "id": "defaultPaletteIndex",
+          "value": 2
+        }
+      ]
+    },
+    "model0000016b7fb941ef_00000000": {
+      "id": "model0000016b7fb941ef_00000000",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016b7fb61d8a_00000002",
+            "dataItems": [
+              {
+                "id": "model0000016b7fb957ac_00000002",
+                "itemId": "demandshaped.item",
+                "itemLabel": "item"
+              },
+              {
+                "id": "model0000016b7fb96462_00000000",
+                "itemId": "demandshaped.store",
+                "itemLabel": "store"
+              },
+              {
+                "id": "model0000016b7fb96e92_00000001",
+                "itemId": "demandshaped.sales",
+                "itemLabel": "sales"
+              }
+            ],
+            "id": "model0000016b7fb957ac_00000001"
+          }
+        ]
+      },
+      "visTypeLocked": true,
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016b7fb96462_00000000",
+              "model0000016b7fb957ac_00000002"
+            ],
+            "dataItemSettings": [],
+            "caption": "Words",
+            "id": "categories"
+          },
+          {
+            "name": "size",
+            "dataItems": [
+              "model0000016b7fb96e92_00000001"
+            ],
+            "caption": "Size",
+            "id": "size"
+          }
+        ]
+      },
+      "type": "live",
+      "visId": "com.ibm.vis.rave2bundlewordcloud",
+      "name": {
+        "translationTable": {}
+      },
+      "properties": [
+        {
+          "id": "defaultPaletteIndex",
+          "value": 3
+        }
+      ]
+    },
+    "model0000016b7fbbfe7f_00000000": {
+      "id": "model0000016b7fbbfe7f_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 19px;\">Yearly Sales Per Item</p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    },
+    "model0000016b7fbbfe82_00000000": {
+      "id": "model0000016b7fbbfe82_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 21px;\">Monthly Sales for Past 5 years</p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    },
+    "model0000016b7fbbfe84_00000000": {
+      "id": "model0000016b7fbbfe84_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 19px;\">Sales per item per store</p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    }
+  }
+}
