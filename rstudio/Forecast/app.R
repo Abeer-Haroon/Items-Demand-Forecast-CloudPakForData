@@ -15,24 +15,19 @@ library(r2d3)
 
 library(nycflights13)
 
-watson_ml_creds_url      <- 'https://us-south.ml.cloud.ibm.com'
-watson_ml_creds_username <- '133ddbba-c129-4222-87e0-72eb4895c22c'
-watson_ml_creds_password <- 'f7e651f7-d923-4e05-995b-40eec8e65a0d'
+watson_ml_creds_url      <- 'https://us-south.ml.cloud.ibm.com' #change this to your url
+watson_ml_creds_username <- 'Add the username here'
+watson_ml_creds_password <- 'Add the password here'
 
-ml_endpoint.model        <- 'https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/bc54c8e4-e422-416a-8827-96325a0d898a/online'
+ml_endpoint.model        <- 'Add the model endpoint here for store 1 item 1'
 watson_ml_creds_auth_headers <- get_wml_auth_headers(watson_ml_creds_url, watson_ml_creds_username, watson_ml_creds_password)
 sales <- 500
 title <- tags$a(href='https://www.ibm.com/uk-en/analytics/cloud-private-for-data',
                 icon("yellow"),
-                'The Data Store')
+                'The Data Shop')
 
 ui <- dashboardPage(
-  #dashboardHeader(
-  #  title = "The Data Store",
-  #  titleWidth = 200
-  
-  
-  # ),
+ 
   dashboardHeader(title = title),
   dashboardSidebar(
     
@@ -87,16 +82,7 @@ ui <- dashboardPage(
     ),
     
     
-    
-    
-    #  box(
-    #  title = "Title 1", width = 4, solidHeader = TRUE, status = "primary" ,
-    
-    
-    
-    
-    #  plotOutput("lineChart") ,
-    
+   
     box(
       width = 40,
       height = 510,
@@ -141,34 +127,34 @@ server <- function(input, output, session) {
       else if(input$radio == 2){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,1297, ']]}')
         print(payload1)
-        ml_endpoint.model2 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/7bbe9c93-4481-4674-9cd5-5b8032e8f2d6/online"
+        ml_endpoint.model2 <- "Add the model endpoint here for store 1 item 2"
         results <- wml_score(ml_endpoint.model2, watson_ml_creds_auth_headers, payload1) }
       else if(input$radio == 3){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,845, ']]}')
         print(payload1)
-        ml_endpoint.model3 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/5c3c1496-82b8-430b-b2d1-b84f52378604/online"
+        ml_endpoint.model3 <- "Add the model endpoint here for store 1 item 3"
         results <- wml_score(ml_endpoint.model3, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 4){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,450, ']]}')
         print(payload1)
-        ml_endpoint.model4 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/a354f7dc-ece5-42be-97e8-1ae85131d421/online"
+        ml_endpoint.model4 <- "Add the model endpoint here for store 1 item 4"
         results <- wml_score(ml_endpoint.model4, watson_ml_creds_auth_headers, payload1) }
       else if(input$radio == 5){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,418, ']]}')
         print(payload1)
-        ml_endpoint.model5 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/63db9d1a-abd4-4f13-8cc8-9c2f3b261404/online"
+        ml_endpoint.model5 <- "Add the model endpoint here for store 1 item 5"
         results <- wml_score(ml_endpoint.model5, watson_ml_creds_auth_headers, payload1) }
       else if(input$radio == 6){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,1427, ']]}')
         print(payload1)
-        ml_endpoint.model6 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/0ab0fac7-2cf8-41c1-8b92-3c78cebb96c8/online"
+        ml_endpoint.model6 <- "Add the model endpoint here for store 1 item 6"
         results <- wml_score(ml_endpoint.model6, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 7){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,1330, ']]}')
         print(payload1)
-        ml_endpoint.model7 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/78c57585-4ead-4cc3-bc07-0943d77aaee2/online"
+        ml_endpoint.model7 <- "Add the model endpoint here for store 1 item 7"
         results <- wml_score(ml_endpoint.model7, watson_ml_creds_auth_headers, payload1) }
     }
     
@@ -177,43 +163,43 @@ server <- function(input, output, session) {
       if (input$radio == 1){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,741, ']]}')
         print(payload1)
-        ml_endpoint.model <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/967b05ca-08cb-4c26-82ea-070ce04872e3/online"
+        ml_endpoint.model <- "Add the model endpoint here for store 2 item 1"
         results <- wml_score(ml_endpoint.model, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 2){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,1900, ']]}')
         print(payload1)
-        ml_endpoint.model2 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/c62e47e2-ec99-40c0-a373-3f85a77912f3/online"
+        ml_endpoint.model2 <- "Add the model endpoint here for store 2 item 2"
         results <- wml_score(ml_endpoint.model2, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 3){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,1230, ']]}')
         print(payload1)
-        ml_endpoint.model3 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/f2a220af-7a43-4aed-8a3a-89bb34986b4b/online"
+        ml_endpoint.model3 <- "Add the model endpoint here for store 2 item 3"
         results <- wml_score(ml_endpoint.model3, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 4){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,742, ']]}')
         print(payload1)
-        ml_endpoint.model4 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/489916a5-0a84-4444-8137-3bfc90b10602/online"
+        ml_endpoint.model4 <- "Add the model endpoint here for store 2 item 4"
         results <- wml_score(ml_endpoint.model4, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 5){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,639, ']]}')
         print(payload1)
-        ml_endpoint.model5 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/622cff8d-d4aa-4351-9429-db4b635dabcf/online"
+        ml_endpoint.model5 <- "Add the model endpoint here for store 2 item 5"
         results <- wml_score(ml_endpoint.model5, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 6){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,1964, ']]}')
         print(payload1)
-        ml_endpoint.model6 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/232a6029-0eef-4de6-9ec3-39fe739e488a/online"
+        ml_endpoint.model6 <- "Add the model endpoint here for store 2 item 6"
         results <- wml_score(ml_endpoint.model6, watson_ml_creds_auth_headers, payload1) }
       
       else if(input$radio == 7){
         payload1 <- paste0('{"fields":["date","store", "item","sales"],"values":[["',input$date, '",', input$store, ',', input$radio, ',' ,1953, ']]}')
         print(payload1)
-        ml_endpoint.model7 <- "https://us-south.ml.cloud.ibm.com/v3/wml_instances/18dfe497-1e1f-4835-ab4c-8c46eea12e7c/deployments/aded1790-5706-4149-8833-42a59c693c88/online"
+        ml_endpoint.model7 <- "Add the model endpoint here for store 2 item 7"
         results <- wml_score(ml_endpoint.model7, watson_ml_creds_auth_headers, payload1) }
     }
     
@@ -268,7 +254,7 @@ server <- function(input, output, session) {
   output$vbox <- renderValueBox({
     valueBox(
       
-      paste0(250), "Average Demand per item", icon = icon("table"),
+      paste0(250), "Average Demand per item", icon = icon("table")
       
     )
   })

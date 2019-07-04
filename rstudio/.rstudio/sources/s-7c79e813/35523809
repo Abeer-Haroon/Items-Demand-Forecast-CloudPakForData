@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558250115892.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "35523809",
+    "lastKnownWriteTime" : 1560967887,
+    "last_content_update" : 1560967887262,
+    "path" : "~/Forecast/app.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "106,40",
+        "scrollLine" : "95"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
