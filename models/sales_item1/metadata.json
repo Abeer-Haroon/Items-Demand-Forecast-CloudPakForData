@@ -1,0 +1,14 @@
+{
+    "id": 1561724931156,
+    "name": "sales_item1",
+    "latestModelVersion": 1,
+    "author": "999",
+    "createdAt": 1561724931156,
+    "filename": "import",
+    "type": "pmml-model-3.0",
+    "serialization": "pmml",
+    "params": {},
+    "publishedBy": "",
+    "isPublished": false,
+    "publishedModelVersion": -1
+}
